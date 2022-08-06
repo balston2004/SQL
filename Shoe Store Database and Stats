@@ -1,0 +1,35 @@
+Create a shoe store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER, aisle INTEGER);
+INSERT INTO store VALUES (1, "Timberland", 120, 5, 7);
+INSERT INTO store VALUES (2, "Nike", 79.99, 12, 9);
+INSERT INTO store VALUES (3, "Converse", 44.99, 10, 2);
+INSERT INTO store VALUES (4, "New Balance", 54.99, 10, 4);
+INSERT INTO store VALUES (5, "Adidas", 69.99, 15, 4);
+INSERT INTO store VALUES (6, "Puma", 44.99, 5, 4);
+INSERT INTO store VALUES (7, "Dress shoes", 39.99, 20, 12);
+INSERT INTO store VALUES (8, "Flip Flops", 24.99, 50, 14);
+INSERT INTO store VALUES (9, "FILAS", 54.99, 3, 15);
+INSERT INTO store VALUES (10, "ASICS", 34.99, 9, 11);
+INSERT INTO store VALUES (11, "K-Swiss", 44.99, 8, 11);
+INSERT INTO store VALUES (12, "Gucci", 199.99, 35, 8);
+INSERT INTO store VALUES (13, "Yeezy", 499.99, 30, 9);
+INSERT INTO store VALUES (14, "Jordans", 249.99, 33, 9);
+INSERT INTO store VALUES (15, "Christian Louboutin", 999.99, 7, 13);
+INSERT INTO store VALUES (16, "Manolo Blahnik", 1249.99, 9, 13);
+SELECT * FROM store ORDER BY price;
+SELECT aisle, SUM(quantity) FROM  store GROUP BY aisle;
+
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price asc; 
+
+--what is the sum quantity by aisle? 
+SELECT aisle (sum) "from store group by aisle"
+FROM store; 
+
+--what are the 5 most expensive items? 
+SELECT name, price
+FROM store
+order by price desc
+limit 5; 
