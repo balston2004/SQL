@@ -57,8 +57,11 @@ INSERT INTO songs (artist, title)
 INSERT INTO songs (artist, title)
     VALUES ("Guns N' Roses", "Don't cry");
     
-Select title FROM songs WHERE artist ='Queen';
-SELECT name from artists where genre='Pop';
 Select title
-FROM songs
-WHERE artist IN (SELECT name FROM artists WHERE genre ='Pop');
+FROM songs 
+WHERE artist ='Queen';
+
+SELECT name 
+FROM artists
+WHERE genre='Pop';
+
